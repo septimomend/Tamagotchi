@@ -15,6 +15,11 @@ int main()
 {
 	cout << "\tWelcome to Tamagochi Console Game" << endl;
 
+	cout << "\t\t        /\\  /\\" << endl;
+	cout << "\t\t ---   < ^  ^ >" << endl;
+	cout << "\t\t|Hi!|            " << endl;
+	cout << "\t\t ---" << endl;
+
 	cout << "...you are my caretaker now. ";
 	Critter crit; //instance a new object and default hunger/boredom level is 0
 	crit.Talk();
