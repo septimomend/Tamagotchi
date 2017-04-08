@@ -1,9 +1,3 @@
-// Tamagotchi.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
-
-
 //"Tamagotchi" main.cpp
 //this program is a simple game "Tamagotchi", where player is caretaker for critter
 #include "stdafx.h"
