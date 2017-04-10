@@ -29,21 +29,58 @@ void Critter::Talk()
 {
 	std::cout << "I am a critter and I feel ";
 	unsigned int mood = GetMood();
+	unsigned int hunger = GetHunger();
 	if (mood > 15)
 	{
-		cout << "mad." << endl;
+		cout << "mad. " << endl;
+	}
+	else if (mood > 12)
+	{
+		cout << "very bad. ";
 	}
 	else if (mood > 10)
 	{
-		cout << "frustrated." << endl;
+		cout << "frustrated. ";
+	}
+	else if (mood > 7)
+	{
+		cout << "worry. ";
 	}
 	else if (mood > 5)
 	{
-		cout << "okay." << endl;
+		cout << "okay. ";
+	}
+	else if (mood > 2)
+	{
+		cout << "good. ";
 	}
 	else
 	{
-		cout << "happy." << endl;
+		cout << "happy. I am satisfied." << endl;
+	}
+	if (hunger > 15 && mood > 15)
+	{
+		cout << "You forget about me! You a horrible caretaker! I will die through hunger and then I will kill you!" << endl;
+	}
+	else if (hunger > 10)
+	{
+		cout << "I am very-very hungry! Give me food! Please!" << endl;
+	}
+	else if (hunger > 7)
+	{
+		cout << "I begin to starve. Feed me." << endl;
+	}
+	else if (hunger > 5)
+	{
+		cout << "I am not very hungry, but would not refuse from cookies." << endl;
+	}
+	else if (hunger > 2)
+	{
+		cout << "I am not hungry. Lets play?" << endl;
+	}
+	else
+	{
+		cout << "I don't feel hungry. You are the best caretaker in world!" << endl;
 	}
 	PassTime();
 }
@@ -72,4 +109,14 @@ void Critter::Play(int fun)
 		m_Boredom = 0;
 	}
 	PassTime();
+}
+
+int Critter::GetHunger() const
+{
+	return m_Hunger;
+}
+
+int Critter::GetBoredom() const
+{
+	return m_Boredom;
 }

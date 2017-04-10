@@ -7,6 +7,8 @@ public:
 	void Talk(); //function for feedback to critter
 	void Eat(int food = 4); //feed critter
 	void Play(int fun = 4); //play with critter;
+	int GetHunger() const;
+	int GetBoredom() const;
 private:
 	int m_Hunger; // hunger
 	int m_Boredom; // and boredom of object

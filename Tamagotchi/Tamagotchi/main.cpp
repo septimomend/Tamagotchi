@@ -23,6 +23,7 @@ int main()
 	cout << "1 - Listen to critter" << endl;
 	cout << "2 - Feed critter" << endl;
 	cout << "3 - Play with critter" << endl;
+	cout << "4 - Critter's hunger and boredom level in numbers" << endl;
 	// main cycle
 	// all actions of player calls some function
 	do
@@ -42,6 +43,10 @@ int main()
 			break;
 		case 3:
 			crit.Play(); //calling funcion Play()
+			break;
+		case 4:
+			cout << "Hunger level in numbers - " << crit.GetHunger() << endl;
+			cout << "Boredom level in numbers - " << crit.GetBoredom() << endl;
 			break;
 		default:
 			cout << "Sorry, but " << choice << " isn't a valid choice." << endl;
